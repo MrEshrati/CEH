@@ -29,6 +29,7 @@ driver.find_element(By.XPATH , '//*[@id="react-autowhatever-1--item-1"]/a').clic
 WebDriverWait(driver,10).until(EC.element_to_be_clickable)
 driver.find_element(By.XPATH , '//*[@id="__next"]/main/div/section[1]/section/div[3]/section/section/div[2]/div[2]/div/div[2]/button').click()
 sleep(3)
+WebDriverWait(driver,10).until(EC.visibility_of_element_located)
 driver.find_element(By.XPATH , '/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/button[10]').click()
 sleep(1)
 driver.find_element(By.XPATH , '/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div[2]/button').click()
