@@ -1,15 +1,16 @@
+import os
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+username = os.environ["INSTAGRAM_USERNAME"]
+password = os.environ["INSTAGRAM_PASSWORD"]
+
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
-
-username = 'REDACTED'
-password = 'REDACTED'
 
 WebDriverWait(driver,10).until(EC.element_to_be_clickable)
 driver.find_element(By.NAME , 'username').send_keys(username)
